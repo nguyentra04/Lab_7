@@ -10,7 +10,7 @@
 <body>
     <section>
         <h1> danh sach khoa</h1>
-            <table class =""></table>
+            <table class ="">
                 <thead>
                     <tr>
                         <th>Makhoa</th>

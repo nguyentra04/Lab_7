@@ -13,13 +13,13 @@
         <form action="" method="post">
             <div class="card">
                 <div class="card-header">
-                <h3>Thông tin chi tiết khoa</h3>
+                <h3>Thông tin chi tiết môn học</h3>
                 </div>
                 <div class="card-body">
                     <div class="div">
                         <label for="MaMH">Mã môn học</label>
                         <div class="div">
-                            <input type="text" class="form-control" aria-describedby="MaKH" {{$MH->MaMH}}>
+                            <input type="text" class="form-control" aria-describedby="MaMH" {{$MH->MaMH}}>
                         </div>
                     </div>
                 </div>

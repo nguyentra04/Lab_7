@@ -51,4 +51,26 @@ class NHT_MHcontroller extends Controller
         DB::update("update monhoc set TenMH = ?, SoTiet = ? where MaMH = ?", [$TenMH, $SoTiet, $MaMH]);
         return redirect('NHT_listMH');
     }
+    //insert -post data from form
+    public function NHTinsert(Request $request)
+    {
+        //kiem tra du lieu nhap
+        $request->validate([
+            'MaMH' => 'required|max:10',
+            'TenMH' => 'required|max:255',
+            'SoTiet' => 'required|max:45'],
+            ['MaMH.requited'=>'vui long nhap ma khoa', 
+            'TenMH.requited'=>'vui long nhap ten khoa',
+            'SoTiet.requited'=>'vui long nhap so tiet']);
+        //lấy dữ liệu từ form
+        $MaMH = $request->input('MaMH');
+        $TenMH = $request->input('TenMH');
+        $SoTiet = $request->input('SoTiet');
+    
+        //truy vấn dữ liệu từ bảng MH
+        DB::insert("insert into monhoc ('MaMH','TenMH','SoTiet') values (?,?)", [$MaMH,$TenMH,$SoTiet]);
+        //chuyển hướng đến trang list
+        return redirect('NHT_list')->with('success', 'Thêm môn học thành công!');
+
+    }
 }

@@ -24,7 +24,7 @@
                 </p>
             </div>
             <div class="card-footer">
-                <a href="/MH" class="btn btn-primary">Back</a>
+                <a href="/monhoc" class="btn btn-primary">Back</a>
             </div>
         </div>
     </section>

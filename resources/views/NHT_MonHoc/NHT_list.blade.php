@@ -9,8 +9,8 @@
 </head>
 <body>
     <section>
-        <h1> danh sach khoa</h1>
-            <table class =""></table>
+        <h1> danh sách môn học </h1>
+            <table class ="container my-3">
                 <thead>
                     <tr>
                         <th>Mã môn học</th>
